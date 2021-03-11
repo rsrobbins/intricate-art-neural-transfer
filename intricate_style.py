@@ -13,13 +13,13 @@ from PIL import Image
 import PIL.ImageOps
 import tensorflow as tf
 
-from tensorflow.python.keras._impl.keras.models import Model
-from tensorflow.python.keras._impl.keras.engine import Input
-from tensorflow.python.keras._impl.keras.layers.convolutional import Convolution2D, AveragePooling2D, MaxPooling2D
-from tensorflow.python.keras._impl.keras import backend as K
-from tensorflow.python.keras._impl.keras.utils.data_utils import get_file
-from tensorflow.python.keras._impl.keras.utils.layer_utils import convert_all_kernels_in_model
-from tensorflow.python.keras._impl.keras.applications.vgg16 import VGG16
+from tensorflow.python.keras.models import Model
+from tensorflow.python.keras.engine import Input
+from tensorflow.python.keras.layers.convolutional import Convolution2D, AveragePooling2D, MaxPooling2D
+from tensorflow.python.keras import backend as K
+from tensorflow.python.keras.utils.data_utils import get_file
+from tensorflow.python.keras.utils.layer_utils import convert_all_kernels_in_model
+from tensorflow.python.keras.applications.vgg16 import VGG16
 
 
 TF_WEIGHTS_PATH_NO_TOP = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'

@@ -2,6 +2,17 @@
 
 This repository contains code and example images to generate intricate art designs. The corresponding blog article that goes along with this code is found here: https://medium.com/@kramea/creating-intricate-art-with-neural-style-transfer-e5fee5f89481
 
+### Anaconda
+
+Create an environment called **art** and install the following packages to run the code with minor changes:
+
+- conda install pillow
+- conda install scipy=0.19.1
+- conda install tensorflow=1.9.0
+- conda install h5py
+
+You need to install an obsolete version of SciPy and TensorFlow. I am currently trying to update to code to run on a Jetson Nano.
+
 ### Try it now
 
 [![Run on FloydHub](https://static.floydhub.com/button/button.svg)](https://floydhub.com/run)

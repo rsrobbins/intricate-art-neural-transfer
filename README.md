@@ -4,7 +4,7 @@ This repository contains code and example images to generate intricate art desig
 
 ### Anaconda
 
-Create an environment called **art** and install the following packages to run the code with minor changes:
+Create an environment called **art** using Python 3.6 and install the following packages to run the code with minor changes:
 
 - conda install pillow
 - conda install scipy=0.19.1

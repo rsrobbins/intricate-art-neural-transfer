@@ -217,7 +217,8 @@ def deprocess_image(x):
 
 def load_mask_sil(invert_sil, shape):
     width, height, _ = shape
-    invert_array = np.array(invert_sil.convert('L'))
+    # next line does not appear to be necessary
+    #invert_array = np.array(invert_sil.convert('L'))
     mask = imresize(invert_sil, (width, height), order=3).astype('float32')
 
     # Perform binarization of mask

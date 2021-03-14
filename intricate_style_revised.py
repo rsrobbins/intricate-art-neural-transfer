@@ -16,6 +16,7 @@ import PIL.ImageOps
 import tensorflow as tf
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"]="2"
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 from tensorflow.python.keras.models import Model
 from tensorflow.python.keras.engine import Input

@@ -509,7 +509,7 @@ for i in range(num_iter):
         mask = load_mask_sil(inverted_silhouette, img.shape)
         final_img = mask_content(base_image_path, img, mask)
         end_time = time.time()
-        imsave(fname, final_img)
+        io.imsave(fname, final_img)
         print("Image saved as", fname)
         print("Iteration %d completed in %ds" % (i + 1, end_time - start_time))
 

@@ -506,7 +506,7 @@ for i in range(num_iter):
         fname = result_prefix + "_pattern_output.png"
 
         # convert image to numpy array
-        data = asarray(inverted_silhouette)
+        data = np.asarray(inverted_silhouette)
         mask = load_mask_sil(data, img.shape)
         final_img = mask_content(base_image_path, img, mask)
         end_time = time.time()

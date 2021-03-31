@@ -188,7 +188,7 @@ def preprocess_image(image_path, load_dims=False, read_mode="color"):
         else:
             img_height = args.img_size
 
-    img = imresize(img, (img_width, img_height)).astype('float32')
+    img = imresize(img, (img_width, img_height), preserve_range=True).astype('float32')
 
     # RGB -> BGR
     img = img[:, :, ::-1]
@@ -218,7 +218,7 @@ def deprocess_image(x):
 
 def load_mask_sil(invert_sil, shape):
     width, height, _ = shape
-    mask = imresize(invert_sil, (width, height), order=3).astype('float32')
+    mask = imresize(invert_sil, (width, height), order=3, preserve_range=True).astype('float32')
 
     # Perform binarization of mask
     mask[mask <= 127] = 0
@@ -234,11 +234,11 @@ def load_mask_sil(invert_sil, shape):
 # util function to apply mask to generated image
 def mask_content(content_path, generated, mask, bg_color=bg_color):
     content_image = io.imread(content_path, pilmode='RGB')
-    content_image = imresize(content_image, (img_width, img_height), order=3)
+    content_image = imresize(content_image, (img_width, img_height), order=3, preserve_range=True)
     width, height, channels = generated.shape
     if bg_image is not None:
         background_image = io.imread(bg_image, pilmode='RGB')
-        background_image = imresize(background_image, (img_width, img_height), order=3)
+        background_image = imresize(background_image, (img_width, img_height), order=3, preserve_range=True)
         for i in range(width):
             for j in range(height):
                 if mask[i,j] == 0:
@@ -496,11 +496,11 @@ for i in range(num_iter):
     if not rescale_image:
         img_ht = int(img_width * aspect_ratio)
         print("Rescaling Image to (%d, %d)" % (img_width, img_ht))
-        img = imresize(img, (img_width, img_ht), order=args.rescale_method)
+        img = imresize(img, (img_width, img_ht), order=args.rescale_method, preserve_range=True)
 
     if rescale_image:
         print("Rescaling Image to (%d, %d)" % (img_WIDTH, img_HEIGHT))
-        img = imresize(img, (img_WIDTH, img_HEIGHT), order=args.rescale_method)
+        img = imresize(img, (img_WIDTH, img_HEIGHT), order=args.rescale_method, preserve_range=True)
     
     if i == num_iter-1:
         fname = result_prefix + "_pattern_output.png"

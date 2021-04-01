@@ -11,7 +11,7 @@ Create an environment called **art** using Python 3.6 and install the following 
 - conda install tensorflow=1.9.0
 - conda install h5py
 
-You need to install an obsolete version of SciPy and TensorFlow. I am currently trying to update to code to run on a Jetson Nano.
+You need to install an obsolete version of SciPy and TensorFlow. I am currently trying to update the code to run on a Jetson Nano.
 
 ### Try it now
 

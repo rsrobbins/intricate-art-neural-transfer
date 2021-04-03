@@ -7,11 +7,12 @@ This repository contains code and example images to generate intricate art desig
 Create an environment called **art** using Python 3.6 and install the following packages to run the code with minor changes:
 
 - conda install pillow
-- conda install scipy=0.19.1
+- <s>conda install scipy=0.19.1</s>
+- install scikit-image
 - conda install tensorflow=1.9.0
 - conda install h5py
 
-You need to install an obsolete version of SciPy and TensorFlow. I am currently trying to update the code to run on a Jetson Nano.
+You need to install an obsolete version of TensorFlow. I have eliminated the need to install an obsolete version of SciPy. I am currently trying to update the code to run on a Jetson Nano.
 
 ### Try it now
 

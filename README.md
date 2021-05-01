@@ -8,7 +8,7 @@ Create an environment called **art** using Python 3.6 and install the following 
 
 - conda install pillow
 - <s>conda install scipy=0.19.1</s>
-- install scikit-image
+- conda install scikit-image
 - conda install tensorflow=1.9.0
 - conda install h5py
 
